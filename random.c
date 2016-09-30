@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+//Use this function for complete randomness
 int random_int(int max)
 {
   return rand() % max;
