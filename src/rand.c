@@ -2,7 +2,10 @@
 #include <stdlib.h>
 #include <time.h>
 // TODO: use a better random generator
-
+int random_int(int max)
+{
+  return init_rand() % max;
+}
 int main(int argc, char *argv[]) {
   if (argc != 2)
   {
