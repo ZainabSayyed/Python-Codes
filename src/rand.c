@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+// TODO: use a better random generator
 int random_int(int max)
 {
   return rand() % max;
