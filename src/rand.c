@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-//Use this function for complete randomness
+
+// TODO: use a better random generator
 int random_int(int max)
 {
   return rand() % max;
@@ -17,3 +18,4 @@ int main(int argc, char *argv[]) {
   printf("%d\n", result);
   return EXIT_SUCCESS;
 }
+void init_rand(void) {  srand(time(NULL)); } 
