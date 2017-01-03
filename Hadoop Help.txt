@@ -1,0 +1,11 @@
+list files:
+hadoop fs -ls
+move dataset into folder:
+hadoop fs -put sample_test.csv student_Hour
+run mapper and reducer on dataset and store output:
+hs mapper.py reducer.py student_Hour OutputS7
+or
+cat sample_test.csv | python mapper.py | sort | python reducer.py
+View result:
+hadoop fs -cat OutputS7/part-00000
+
