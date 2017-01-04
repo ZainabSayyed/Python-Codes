@@ -1,0 +1,4 @@
+Big Data Analytics Using Hadoop:
+some discussion forum data is used for analysis. It is a type of user generated content that is common  all around the web. 
+Most popular websites have some kind of a forum. 
+Answered various questions about the data set by implementing mapper and reducer (python) and deployed in Hadoop.
