@@ -6,12 +6,14 @@ def create_grap(words):
         for des_word in range(0,len(words)):
             if words[src_word]==words[des_word]: continue
             length = len(words[src_word])  - len(words[des_word])
-            #print "length", words[src_word], words[des_word], length
             dest_word= list(words[des_word])
             count = 0
+            word_dict=dict()
+            
             if length< 2:
                 for char in source_word:
-                    if char not in dest_word:
+                    word_dict[char]=word_dict.get(char,0)+1
+                    if char not in dest_word or word_dict.get(char)>1 :
                         count = count+1
             else:
                 continue
@@ -20,6 +22,7 @@ def create_grap(words):
             else:
                 if count==0:
                     list_related.append(words[des_word])
-                #print "count",words[src_word], words[des_word], count
+                    
+                                
         related_word[words[src_word]]=list_related
     return related_word
